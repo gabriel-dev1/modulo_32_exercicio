@@ -16,7 +16,7 @@ const rotas = createBrowserRouter([
   }
 ])
 
-const App = () => {
+function App() {
   return (
     <Provider store={store}>
       <EstiloGlobal />
