@@ -22,6 +22,12 @@ export const Main = styled.main`
   background-color: #ccc;
   border-radius: 4px;
   overflow-y: auto;
+
+  @media (max-width: 767px) {
+    margin: 30px;
+    padding: 8px;
+    padding-bottom: 50px;
+  }
 `
 
 export const Input = styled.input`
