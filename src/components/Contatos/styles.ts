@@ -7,6 +7,12 @@ export const Card = styled.div`
   border-radius: 8px;
   padding: 16px;
   margin: 8px;
+
+  @media (max-width: 767px) {
+    width: 100%;
+    padding: 8px;
+    margin: 1px;
+  }
 `
 
 export const Paragraph = styled.p`
