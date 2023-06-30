@@ -11,6 +11,11 @@ export const Button = styled(Link)`
   padding: 8px 32px;
   position: absolute;
   right: 660px;
-  /* display: flex; */
   text-decoration: none;
+
+  @media (max-width: 767px) {
+    position: relative;
+    left: 55px;
+    top: 30px;
+  }
 `
