@@ -34,7 +34,7 @@ const Form = () => {
     <>
       <Main>
         <FormTitle>Resgistrar contato</FormTitle>
-        <FormStyles as="h2" onSubmit={adicionarContato}>
+        <FormStyles onSubmit={adicionarContato}>
           <InputAdicionar
             onChange={(e) => setNome(e.target.value)}
             type="text"
