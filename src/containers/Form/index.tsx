@@ -44,11 +44,13 @@ const Form = () => {
             onChange={(e) => setEmail(e.target.value)}
             type="email"
             placeholder="Email do contato"
+            required
           />
           <InputAdicionar
             onChange={(e) => setTel(e.target.value)}
             type="number"
             placeholder="Telefone do contato"
+            required
           />
           <SaveButton type="submit">Adicionar</SaveButton>
         </FormStyles>
