@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux'
 import Contatos from '../../components/Contatos'
-import { Main } from '../../GlobalStyles'
+import { Main, Title } from '../../GlobalStyles'
 import { RootReducer } from '../../store'
 import ButtonAdicionar from '../../components/BotaoAdicionar'
 
@@ -12,6 +12,7 @@ const ListaDeContatos = () => {
   return (
     <>
       <Main>
+        <Title>Lista de contatos</Title>
         <ul>
           {contatos.map((c) => (
             <li key={c.id}>
