@@ -1,9 +1,9 @@
 import { useDispatch } from 'react-redux'
 import { FormEvent, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Main, Input } from '../../GlobalStyles'
+import { Main } from '../../GlobalStyles'
 import { adicionar } from '../../store/reducers/contatos'
-import { FormStyles, SaveButton } from './styles'
+import { FormStyles, FormTitle, InputAdicionar, SaveButton } from './styles'
 
 const Form = () => {
   const dispatch = useDispatch()
@@ -22,20 +22,35 @@ const Form = () => {
         telefone
       })
     )
+
+    if (nomeCompleto == '') {
+      alert('O nome do contato está vazio.')
+    }
+
     navigate('/')
   }
 
   return (
     <>
       <Main>
-        <FormStyles onSubmit={adicionarContato}>
-          <label>Nome do contato:</label>
-          <Input onChange={(e) => setNome(e.target.value)} />
-          <label>Email do contato:</label>
-          <Input onChange={(e) => setEmail(e.target.value)} />
-          <label>Telefone do contato:</label>
-          <Input onChange={(e) => setTel(e.target.value)} />
-          <SaveButton type="submit">Salvar</SaveButton>
+        <FormTitle>Resgistrar contato</FormTitle>
+        <FormStyles as="h2" onSubmit={adicionarContato}>
+          <InputAdicionar
+            onChange={(e) => setNome(e.target.value)}
+            type="text"
+            placeholder="Nome do contato"
+          />
+          <InputAdicionar
+            onChange={(e) => setEmail(e.target.value)}
+            type="email"
+            placeholder="Email do contato"
+          />
+          <InputAdicionar
+            onChange={(e) => setTel(e.target.value)}
+            type="number"
+            placeholder="Telefone do contato"
+          />
+          <SaveButton type="submit">Adicionar</SaveButton>
         </FormStyles>
       </Main>
     </>
