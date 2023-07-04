@@ -31,11 +31,12 @@ export const Main = styled.main`
 `
 
 export const Input = styled.input`
-  padding: 8px 40px;
+  padding: 8px;
   display: block;
   border: none;
   border-radius: 8px;
   margin: 8px 0;
+  width: 50%;
 `
 
 export const Button = styled.button`
@@ -47,6 +48,13 @@ export const Button = styled.button`
   border-radius: 8px;
   margin-left: 8px;
   font-weight: bold;
+`
+
+export const Title = styled.h1`
+  font-weight: bold;
+  color: #000;
+  padding-bottom: 16px;
+  margin-left: 8px;
 `
 
 export default EstiloGlobal
